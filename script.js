@@ -1,28 +1,28 @@
-const tarefa = document.querySelector("#tarefa");
-const btn = document.querySelector("#btn");
-const lista = document.querySelector("#lista");
+$("#btn").click(function(e){
 
-btn.addEventListener("click", function(){
-    if(tarefa.value == ""){
-    alert("Digite uma tarefa valida");
+    const tarefa = $("#tarefa").val();
+    if(tarefa == ""){
+        alert("Digite uma tarefa valida");
     } else {
-        lista.innerHTML += `<li>
-                                <i class="fa-solid fa-circle-check check"></i>
-                                    <span>${tarefa.value}</span>
-                                 <i class="fa-solid fa-trash-can close"></i>
-                             </li>`
+        $("#lista").append(
+            ` <li>
+                <i class="fa-solid fa-circle-check check"></i>
+                    <span>${tarefa}</span>
+                 <i class="fa-solid fa-trash-can close"></i>
+             </li>`
+        );
+        $("#tarefa").val("");
     }
-    tarefa.value="";
 
-    const close = document.querySelectorAll(".close");
-    for(let i=0; 0<close.length; i++){
-            close[i].addEventListener("click", function(){
-                close[i].parentElement.remove();
-            })
-        }
-
-        lista.addEventListener("click", function(e){
-            e.target.parentElement.querySelector(".check").style.color = "#349223";
-            e.target.parentElement.querySelector("span").style.textDecoration = "line-through";
+    $(".close").each(function(){
+        $(this).click(function(){
+            $(this).parent().remove();
         })
+    })
+
+    $("#lista li").click(function(){
+        $(this).find(".check").css("color", "#349223");
+        $(this).find("span").css("text-decoration", "line-through");
+    })
+
 })

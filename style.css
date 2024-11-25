@@ -1,7 +1,7 @@
 body{
     margin:0;
     padding: 0;
-    background-color: rgb(41, 15, 51);
+    background-color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -14,7 +14,7 @@ header{
     justify-content: center;
 }
 header h1{
-    color: aliceblue;
+    color: rgb(41, 15, 51);
     text-shadow: aliceblue 0px 0px 25px;
     padding: 20px;
     display: flex;
@@ -25,23 +25,20 @@ header input{
     display: flex;
     justify-content: center;
     padding: 10px 0 ;
-    border: 2px rgb(93, 10, 126) solid;
+    border: 2px rgb(177, 177, 177) solid;
     border-radius: 10px;
-    background-color: rgb(78, 29, 97);
-    color: aliceblue;
+    background-color: rgb(236, 236, 236);
+    color: rgb(41, 15, 51);
     width: 20%;
     text-align: center;
     outline: none;
     font-size: 17px;
     transition: 0.3s;
-}
-
-header input:hover{
-    box-shadow: rgb(126, 53, 155) 0px 0px 10px;
+    box-shadow: rgba(0, 0, 0, 0.514) 0px 0px 50px;
 }
 
 header input::placeholder{
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     text-align: center;
     width: 100%;
 }
@@ -56,7 +53,7 @@ header span{
 }
 
 .conteiner{
-    background-color: rgb(78, 29, 97);
+    background-color:rgb(236, 236, 236);
     margin-left: 25%;
     margin-top: 20px;
     width: 50%;
@@ -68,12 +65,9 @@ header span{
     border: none;
     border-radius: 20px;
     transition: 0.3s;
-    border: 3px rgb(93, 10, 126) solid;
+    border: 3px rgb(177, 177, 177) solid;
 }
 
-.conteiner:hover{
-    box-shadow: rgb(126, 53, 155) 0px 0px 30px;
-}
 
 .lista{
     width: 100%;
@@ -89,14 +83,15 @@ header span{
 }
 
 .lista ul li:hover{
-    background-color: rgb(41, 15, 51);
+    background-color: rgb(160, 160, 160);
     transition: 0.5s;
-    border-radius: 6px;
+    border-radius: 10px;
     border: none;
+    color: aliceblue;
 }
 
 .lista ul li{
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     display: flex;
     list-style: none;
     cursor: pointer;
@@ -118,8 +113,9 @@ header span{
 }
 
 .close{
-    color: rgb(255, 230, 0);
+    color: red;
 }
+
 
 *::-webkit-scrollbar{
     width: 20px;
@@ -127,11 +123,5 @@ header span{
 }
 
 *::-webkit-scrollbar-track{
-    background: rgb(41, 15, 51);
+    background: rgb(177, 177, 177)
 }
-
-*::-webkit-scrollbar-thumb{
-   background-color: rgba(95, 21, 124, 0.438);
-   border-radius: 20px;
-}
-
